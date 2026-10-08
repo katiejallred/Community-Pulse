@@ -1,0 +1,21 @@
+{
+  "name": "community-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Takes a pulse of a product community Discord server: exports history, tags feedback with Claude, shows it in a portal, emails a report.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "db",
+    "cli",
+    "web"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "pulse": "npm run pulse --workspace cli --"
+  }
+}
